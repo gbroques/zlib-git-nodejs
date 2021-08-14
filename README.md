@@ -1,6 +1,8 @@
 # zlib-git-nodejs
 Read, hash, and store git objects with Node JS.
 
+Meant for educational purposes, and understanding git internals.
+
 Currently *storing* git objects is not implemented.
 
 ## Usage
