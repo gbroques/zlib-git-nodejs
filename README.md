@@ -11,7 +11,7 @@ $ git cat-file -p 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 ↵
 test
 ```
 
-For viewing the header containing object type, size, and null character separating header from content.
+For viewing the header containing object type, size in bytes, and null character separating header from content.
 ```bash
 $ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 ↵
 blob 5test
@@ -35,7 +35,7 @@ $ echo 'test' | git hash-object --stdin ↵
 9daeafb9864cf43055ae93beb0afd6c7d144bfa4
 ```
 
-For illustrative purposes, demonstrating the hash is the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) of the objects full content, including header information.
+For illustrative purposes, demonstrating the hash is the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) of the object's full content, including header information.
 ```bash
 $ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node hash-object.js ↵
 9daeafb9864cf43055ae93beb0afd6c7d144bfa4
