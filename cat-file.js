@@ -2,14 +2,27 @@ const zlib = require('zlib');
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * 40-digit SHA-1 object hash.
+ *
+ * For example,
+ *
+ *     9daeafb9864cf43055ae93beb0afd6c7d144bfa4
+ *
+ */
 const hash = process.argv[2];
 
 const sliceIndex = 2;
-const object_dir = hash.slice(0, sliceIndex);
+
+// First two digits of hash (e.g. 9d).
+const object_directory = hash.slice(0, 2);
+
+// Last 38 digits of hash,
+// (e.g. aeafb9864cf43055ae93beb0afd6c7d144bfa4).
 const object_filename = hash.slice(sliceIndex);
-const objectPath = path.join('.git', 'objects', object_dir, object_filename);
-const data = fs.readFileSync(objectPath);
-const inflated = zlib.inflateSync(data);
-const content = inflated.toString('utf8');
-// \x00 - https://en.wikipedia.org/wiki/Null_character
-process.stdout.write(content);
+
+const objectPath = path.join('.git', 'objects', object_directory, object_filename);
+const object = fs.readFileSync(objectPath);
+const inflated = zlib.inflateSync(object);
+const contents = inflated.toString('utf8');
+process.stdout.write(contents);
