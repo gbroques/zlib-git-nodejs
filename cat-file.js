@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * 40-digit SHA-1 object hash.
+ * 40-digit hexadecimal SHA-1 object hash.
  *
  * For example,
  *
