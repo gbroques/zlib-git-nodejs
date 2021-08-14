@@ -21,6 +21,6 @@ const objectFilename = hash.slice(2);
 
 const objectPath = path.join('.git', 'objects', objectDirectory, objectFilename);
 const object = fs.readFileSync(objectPath);
-const inflated = zlib.inflateSync(object);
-const contents = inflated.toString('utf8');
+const decompressed = zlib.inflateSync(object);
+const contents = decompressed.toString('utf8');
 process.stdout.write(contents);
