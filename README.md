@@ -31,11 +31,15 @@ For viewing hidden characters such as [null characters](https://en.wikipedia.org
 Node.js equivalent to `git hash-object --stdin`.
 
 ```bash
-$ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node hash-object.js ↵
+$ echo 'test' | git hash-object --stdin ↵
 9daeafb9864cf43055ae93beb0afd6c7d144bfa4
 ```
 
 For illustrative purposes, demonstrating the hash is the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) of the objects full content, including header information.
+```bash
+$ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node hash-object.js ↵
+9daeafb9864cf43055ae93beb0afd6c7d144bfa4
+```
 
 ## Limitations
 Currently works with blobs, commits, but *not* **trees**.
