@@ -55,3 +55,4 @@ Currently works with blobs, commits, but *not* **trees**.
 * https://stackoverflow.com/questions/7625251/compression-and-decompression-of-data-using-zlib-in-nodejs
 * https://developpaper.com/front-end-ramble-git-internal-principle-git-object/
 * https://stackoverflow.com/questions/6984139/how-can-i-get-the-sha1-hash-of-a-string-in-node-js
+* https://codewords.recurse.com/issues/three/unpacking-git-packfiles
