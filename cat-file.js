@@ -19,7 +19,8 @@ const objectDirectory = hash.slice(0, 2);
 // (e.g. aeafb9864cf43055ae93beb0afd6c7d144bfa4).
 const objectFilename = hash.slice(2);
 
-const objectPath = path.join('.git', 'objects', objectDirectory, objectFilename);
+const objectDatabasePath = path.join('.git', 'objects');
+const objectPath = path.join(objectDatabasePath, objectDirectory, objectFilename);
 const compressed = fs.readFileSync(objectPath);
 const decompressed = zlib.inflateSync(compressed);
 const contents = decompressed.toString('utf8');
