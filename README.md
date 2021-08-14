@@ -20,10 +20,10 @@ blob 5test
 ```
 
 ### console-dir
-Uses `console.dir` to output contents from stdin.
+Uses `console.dir` to output contents from stdin to stdout.
 
 ```bash
-$ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node console-dir ↵
+$ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node console-dir.js ↵
 'blob 5\x00test\n'
 ```
 
