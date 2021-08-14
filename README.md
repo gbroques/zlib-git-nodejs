@@ -20,6 +20,9 @@ $ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node hash-object.j
 9daeafb9864cf43055ae93beb0afd6c7d144bfa4
 ```
 
+## Limitations
+Currently works with blobs, commits, but *not* **trees**.
+
 ## Articles
 
 * https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
