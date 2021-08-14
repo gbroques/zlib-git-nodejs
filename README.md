@@ -4,6 +4,7 @@ Read, hash, and store git objects with Node JS.
 ## Usage
 
 ### cat-file
+Node.js equivalent to `git cat-file -p <object hash>`.
 
 ```bash
 $ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 ↵
@@ -11,6 +12,7 @@ blob 5test
 ```
 
 ### hash-object
+Node.js equivalent to `git hash-object --stdin`.
 
 ```bash
 $ node cat-file.js 9daeafb9864cf43055ae93beb0afd6c7d144bfa4 | node hash-object.js ↵
